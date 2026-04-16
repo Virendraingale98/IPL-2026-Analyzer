@@ -1,0 +1,173 @@
+/* Matches Styles */
+.matches-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.matches-container h2 {
+  color: #1e40af;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.filter-buttons button.active {
+  background: #667eea;
+  color: white;
+}
+
+.filter-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.matches-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.match-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+}
+
+.match-card.live {
+  border: 3px solid #ff0000;
+}
+
+.match-card.scheduled {
+  border: 2px solid #667eea;
+}
+
+.match-card.completed {
+  border: 2px solid #10b981;
+  opacity: 0.9;
+}
+
+.match-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-number {
+  font-weight: 600;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.status-badge.live {
+  background: #ff0000;
+  animation: pulse 1s infinite;
+}
+
+.status-badge.completed {
+  background: #10b981;
+}
+
+.match-body {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.team {
+  flex: 1;
+  text-align: center;
+}
+
+.team h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  color: #1e40af;
+}
+
+.score {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.wickets {
+  color: #f5576c;
+  font-size: 0.9em;
+}
+
+.vs {
+  color: #999;
+  font-weight: 600;
+}
+
+.overs-info {
+  flex: 0.3;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.match-footer {
+  background: #f9fafb;
+  padding: 10px 15px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: #666;
+}
+
+.match-result {
+  padding: 15px;
+  background: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.9em;
+}
+
+.match-result p {
+  margin: 5px 0;
+}
+
+.no-matches {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  background: #f9fafb;
+  border-radius: 10px;
+}
