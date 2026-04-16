@@ -20,6 +20,11 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 # Initialize database once at startup
 with app.app_context():
     db.create_all()
+    # Auto-seed if database is empty
+    if Team.query.count() == 0:
+        from seed_data import seed_ipl_2026
+        print("Empty database detected. Seeding initial data...")
+        seed_ipl_2026()
 
 # ==================== TEAMS API ====================
 @app.route('/api/teams', methods=['GET'])
