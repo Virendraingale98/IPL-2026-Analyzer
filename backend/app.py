@@ -17,11 +17,9 @@ db.init_app(app)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Initialize database
-@app.before_request
-def create_tables():
-    with app.app_context():
-        db.create_all()
+# Initialize database once at startup
+with app.app_context():
+    db.create_all()
 
 # ==================== TEAMS API ====================
 @app.route('/api/teams', methods=['GET'])
